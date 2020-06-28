@@ -18,40 +18,27 @@ public class C {
             bList.add(sc.nextLong());
         }
         sc.close();
-        Collections.sort(aList);
-        Collections.sort(bList);
-        int ans = 0;
-        int maxLoop = n + m;
-        if (aList.get(0) >= k && bList.get(0) >= k) {
-            System.out.println(ans);
-        }else{
-            for (int i = 0; i < maxLoop; i++) {
-                if (k <= 0) {
-                    break;
-                }
-                if (n > 0 && m > 0) {
-                    if (aList.get(0) >= bList.get(0)) {
-                        k -= aList.get(0);
-                        aList.remove(0);
-                        n -= 1;
 
-                    } else {
-                        k -= bList.get(0);
-                        bList.remove(0);
-                        m -= 1;
-                    }
-                } else if (n == 0 && m > 0) {
-                    k -= bList.get(0);
-                    bList.remove(0);
-                    m -= 1;
-                } else if (n > 0 && m == 0) {
-                    k -= aList.get(0);
-                    aList.remove(0);
-                    n -= 1;
-                }
-                ans += 1;
-            }
-            System.out.println(ans);
+        long sum = 0;
+        for(long num : bList) {
+            sum += num;
         }
+        int j = m;
+        int ans = 0;
+        for(int i=0; i < n+1; i++){
+            while(j > 0 && sum > k){
+                j--;
+                sum -= bList.get(j);
+            }
+            if (sum > k) {
+                break;
+            }
+            ans = Math.max(ans, i + j);
+            if (i == n) {
+                break;}
+            sum += aList.get(i);
+            
+        }
+        System.out.println(ans);
     }
 }
