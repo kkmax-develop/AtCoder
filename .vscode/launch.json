@@ -1,0 +1,42 @@
+{
+    // IntelliSense を使用して利用可能な属性を学べます。
+    // 既存の属性の説明をホバーして表示します。
+    // 詳細情報は次を確認してください: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-A<AtCoder_eaacec02>",
+            "request": "launch",
+            "mainClass": "ABC172.A",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-B<AtCoder_eaacec02>",
+            "request": "launch",
+            "mainClass": "ABC172.B",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-C<AtCoder_eaacec02>",
+            "request": "launch",
+            "mainClass": "ABC172.C",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-template<AtCoder_eaacec02>",
+            "request": "launch",
+            "mainClass": "template",
+            "projectName": "AtCoder_eaacec02"
+        }
+    ]
+}
