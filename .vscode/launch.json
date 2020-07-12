@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - B",
+            "request": "launch",
+            "mainClass": "AISingContest.B",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - B",
+            "request": "launch",
+            "mainClass": "エイシングプログラミングコンテスト.B",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A_aising",
+            "request": "launch",
+            "mainClass": "エイシングプログラミングコンテスト.A_aising",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A",
+            "request": "launch",
+            "mainClass": "エイシングプログラミングコンテスト.A",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"
