@@ -21,6 +21,13 @@ public class template {
 
         // ソート
         Collections.sort(numList);
+        // 降順ソート
+        Collections.sort(numList);
+        Collections.reverse(numList);
+
+        // 配列
+        ArrayList<Long> nList = new ArrayList<Long>();
+        ArrayList<String> strList = new ArrayList<String>();
 
         // 累乗
         Math.pow(n, 2);
