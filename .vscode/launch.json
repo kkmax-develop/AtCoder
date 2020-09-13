@@ -6,6 +6,90 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - C",
+            "request": "launch",
+            "mainClass": "ABC178.C",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - B",
+            "request": "launch",
+            "mainClass": "ABC178.B",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A",
+            "request": "launch",
+            "mainClass": "ABC178.A",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - B",
+            "request": "launch",
+            "mainClass": "ABC177.B",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A",
+            "request": "launch",
+            "mainClass": "ABC177.A",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - C",
+            "request": "launch",
+            "mainClass": "ABC176.C",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - B",
+            "request": "launch",
+            "mainClass": "ABC176.B",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A",
+            "request": "launch",
+            "mainClass": "ABC176.A",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - B",
+            "request": "launch",
+            "mainClass": "ABC175.B",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - A",
+            "request": "launch",
+            "mainClass": "ABC175.A",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - C",
+            "request": "launch",
+            "mainClass": "ABC174.C",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - B",
+            "request": "launch",
+            "mainClass": "ABC174.B",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - B",
             "request": "launch",
             "mainClass": "AISingContest.B",
