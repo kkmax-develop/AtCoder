@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - B",
+            "request": "launch",
+            "mainClass": "ARC105.B",
+            "projectName": "AtCoder_eaacec02"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - C",
             "request": "launch",
             "mainClass": "ABC178.C",
