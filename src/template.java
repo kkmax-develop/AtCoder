@@ -25,6 +25,9 @@ public class template {
         Collections.sort(numList);
         Collections.reverse(numList);
 
+        // 最大値取得
+        Collections.max(numList);
+
         // 配列
         ArrayList<Long> nList = new ArrayList<Long>();
         ArrayList<String> strList = new ArrayList<String>();
