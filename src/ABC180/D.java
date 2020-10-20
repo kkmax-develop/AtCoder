@@ -15,13 +15,21 @@ public class D {
         long ans = 0;
 
         while (x < y) {
-            if (x / a >= b) {
+            // オーバーフロー対策
+            if (y / a < x) {
+                break;
+            }
+            // 一発で進化してしまうケース
+            if (x*a >= y) {
+                break;
+            }
+            if (x  >= b / (a - 1)) {
                 break;
             }
             x *= a;
             ans += 1;
         }
-        ans = ans + (y-x)/b;
+        ans +=  (y-x-1)/b;
 
         System.out.println(ans);
       
