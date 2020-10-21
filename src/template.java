@@ -52,6 +52,11 @@ public class template {
         }
       }
     }
+    // 3つ以上の数の最大公約数
+    long gcd = 0;
+    for (int i = 0; i < n; i++) {
+        gcd = GCD(gcd, numList.get(i));
+    }
 
   }
   
