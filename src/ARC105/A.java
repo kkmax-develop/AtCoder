@@ -7,38 +7,32 @@ public class A {
  
         Scanner sc = null;
         sc = new Scanner(System.in);
-        long a = sc.nextLong();
-        long b = sc.nextLong();
-        long c = sc.nextLong();
-        long d = sc.nextLong();
+        ArrayList<Long> numList = new ArrayList<Long>();
+        for (int i = 0; i < 4; i++) {
+          numList.add(sc.nextLong());
+        }
         sc.close();
+
+        // ソート A≦B≦C≦D
+        Collections.sort(numList);
+
+        long a = numList.get(0);
+        long b = numList.get(1);
+        long c = numList.get(2);
+        long d = numList.get(3);
 
         String ansStr = "No";
 
-        if (a == b+c+d) {
-            ansStr = "Yes";
-        }
-        if (a+b == c+d) {
-            ansStr = "Yes";
-        }
-        if (a+c == b+d) {
-            ansStr = "Yes";
-        }
+        // 不等号の関係から、試すのはA+D=B+CとD=A+B+Cのみで十分となる
+
         if (a+d == b+c) {
             ansStr = "Yes";
         }
-        if (a+b+c == d) {
+
+        if (d == a+b+c) {
             ansStr = "Yes";
         }
-        if (a+b+d == c) {
-            ansStr = "Yes";
-        }
-        if (a + c + d == b) {
-            ansStr = "Yes";
-        }
-        if (b+c+d == a) {
-            ansStr = "Yes";
-        } 
+        
         System.out.println(ansStr);
       
     }
