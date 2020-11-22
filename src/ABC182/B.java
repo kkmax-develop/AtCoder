@@ -19,7 +19,7 @@ public class B {
         double gy2 = gy * -1;
 
         // 傾きの算出
-        double slope = (gy2 - sy) / (gx - sy);
+        double slope = (gy2 - sy) / (gx - sx);
 
         // 切片の算出
         double intercept = sy - (slope * sx);
