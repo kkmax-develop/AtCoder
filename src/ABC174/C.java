@@ -1,4 +1,5 @@
 package ABC174;
+
 import java.util.*;
 
 public class C {
@@ -8,20 +9,17 @@ public class C {
         sc = new Scanner(System.in);
         int k = sc.nextInt();
         sc.close();
-        long num = 0;
-        long ans = 0;
+        int ans = 1;
         boolean breakFlag = false;
-        int valLen = String.valueOf(k).length();
-        for (int i = 0; i < valLen; i++) {
-            num = num * 10 + 7;
-          }
-        ans = valLen;
-        while (num < Long.MAX_VALUE) {
-            if (num % k == 0) {
+        Set<Integer> set = new HashSet<Integer>();
+        int x = 7%k;
+        while (!set.contains(x)) {
+            if (x == 0) {
                 breakFlag = true;
                 break;
             }
-            num = num * 10 + 7;
+            set.add(x);
+            x = (x * 10 + 7) % k;
             ans += 1;
         }
         if (breakFlag) {
