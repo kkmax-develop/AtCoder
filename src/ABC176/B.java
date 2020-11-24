@@ -7,10 +7,12 @@ public class B {
 
         Scanner sc = null;
         sc = new Scanner(System.in);
+        //　数値型だとオーバーフローの可能性があるため、Stringで持つ
         String n = sc.next();
         sc.close();
         String c = null;
         long sum = 0;
+        
         for (int i=0; i < n.length(); i++) {
             c = n.substring(i, i + 1);
             sum += Long.parseLong(c);
@@ -21,6 +23,5 @@ public class B {
         } else {
             System.out.println("No");
         }
-
     }
 }
