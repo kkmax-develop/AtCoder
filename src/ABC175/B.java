@@ -1,4 +1,5 @@
 package ABC175;
+
 import java.util.*;
 
 public class B {
@@ -20,20 +21,15 @@ public class B {
         long c = 0;
         int ans = 0;
 
-        for (int i = 0; i < numList.size(); i++) {
-            for (int j = 1; j < numList.size(); j++) {
-                for (int k = 2; k < numList.size(); k++) {
+        for (int i = 0; i < numList.size()-2; i++) {
+            for (int j = i+1; j < numList.size()-1; j++) {
+                for (int k = j+1; k < numList.size(); k++) {
                     a = numList.get(i);
                     b = numList.get(j);
                     c = numList.get(k);
-                    listB.add(a);
-                    listB.add(b);
-                    listB.add(c);
-                    List<Long> listC = new ArrayList<Long>(new HashSet<>(listB));
-                    if (listC.size() > 2 && a + b > c && b + c > a && a + c > b) {
+                    if (a + b > c && b + c > a && a + c > b && (a!=b&&b!=c&&a!=c)) {
                         ans += 1;
                     }
-                   listB= new ArrayList<Long>();
                 }
             }
         }
