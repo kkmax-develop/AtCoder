@@ -35,6 +35,9 @@ public class template {
     // 累乗
     Math.pow(n, 2);
 
+    // 平方根
+    Math.sqrt(n);
+
     // 大文字判定
     if (Character.isUpperCase(s.charAt(0))) {
       System.out.println("A");
@@ -63,9 +66,31 @@ public class template {
   // 最大公約数
   private static long GCD(long a, long b) {
     if (b == 0) {
-        return a;
+      return a;
     } else {
-        return GCD(b, a % b);
+      return GCD(b, a % b);
     }
   }
+  
+  private static Map prime_factorization(long n) {
+    Map<Long, Long> res = new HashMap<>();
+    for (long i = 2; i * i <= n; ++i) {
+        if (n % i != 0) continue;
+        long ex = 0; // 指数
+
+        // 割れる限り割り続ける
+        while (n % i == 0) {
+            ++ex;
+            n /= i;
+        }
+
+        // その結果を push
+        res.put((Long) i, (Long) ex);
+    }
+
+    // 最後に残った数について
+    if (n != 1)
+        res.put((Long)n, Long.valueOf(1));
+    return res;
+}
 }
