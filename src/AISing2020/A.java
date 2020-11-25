@@ -12,19 +12,14 @@ public class A {
         int d = sc.nextInt();
         sc.close();
 
-        int answer = 0;
-        ArrayList<Integer> numList = new ArrayList<Integer>();
+        int ans = 0;
         for (int i = L; i <= R; i++) {
-            numList.add(i);
+          if (i % d == 0) {
+            ans +=1;
+          }
         }
 
-        for (int j: numList){
-            if (j/d == 0){
-                answer =+ 1;
-            }
-          }
-
-        System.out.println(answer);
+        System.out.println(ans);
       
       }
 }
