@@ -46,6 +46,8 @@ public class template {
     // 出力
     System.out.println("Hello, World!");
 
+    
+
     // 約数列挙
     for (long i = 1; i * i <= n; i++) {
       if (n % i == 0) {
@@ -72,25 +74,37 @@ public class template {
     }
   }
   
+  //　素因数分解
   private static Map prime_factorization(long n) {
     Map<Long, Long> res = new HashMap<>();
     for (long i = 2; i * i <= n; ++i) {
-        if (n % i != 0) continue;
-        long ex = 0; // 指数
+      if (n % i != 0)
+        continue;
+      long ex = 0; // 指数
 
-        // 割れる限り割り続ける
-        while (n % i == 0) {
-            ++ex;
-            n /= i;
-        }
+      // 割れる限り割り続ける
+      while (n % i == 0) {
+        ++ex;
+        n /= i;
+      }
 
-        // その結果を push
-        res.put((Long) i, (Long) ex);
+      // その結果を push
+      res.put((Long) i, (Long) ex);
     }
 
     // 最後に残った数について
     if (n != 1)
-        res.put((Long)n, Long.valueOf(1));
+      res.put((Long) n, Long.valueOf(1));
     return res;
-}
+  }
+  
+  // 各桁の和を計算
+  private static int findSumOfDigits(int n){
+    int sum= 0;
+    while(n > 0){
+        sum += n%10;
+        n /=10;
+    }
+    return sum;
+  }
 }
