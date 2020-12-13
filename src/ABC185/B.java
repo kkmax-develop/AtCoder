@@ -1,6 +1,5 @@
 package ABC185;
 
-
 import java.util.*;
 
 public class B {
@@ -11,41 +10,39 @@ public class B {
         int n = Integer.parseInt(sc.next());
         int m = Integer.parseInt(sc.next());
         int t = Integer.parseInt(sc.next());
-        int a = Integer.parseInt(sc.next());
-        int b = Integer.parseInt(sc.next());
+        int a = 0;
+        int b = 0;
         int max = n;
-        int cafeCounter = 1;
+        int now = 0;
 
-        n -= a;
+        for (int i = 0; i < m; i++) {
+            
+            a = Integer.parseInt(sc.next());
+            b = Integer.parseInt(sc.next());
 
-        if (n > 0) {
+            // カフェまでのバッテリー消費
+            n -= a - now;
+            now = a;
 
-            for (double i = a+0.5; i < t; i++) {
-                if (i >= a && i <= b) {
-                    if (max > n) {
-                        n += 1;
-                    }
-                } else {
-                    n -= 1;
-                }
-
-                if (i > b && cafeCounter < m) {
-                    cafeCounter += 1;
-                    a = Integer.parseInt(sc.next());
-                    b = Integer.parseInt(sc.next());
-                    n -= (a-(i+0.5));
-                    i = a-0.5;
-                }
-
-                if (n == 0) {
-                    break;
-                }
-
+            // バッテリーが0になったらbreak
+            if(n <= 0){
+                break;
             }
+
+            // カフェでのバッテリー充電
+            n += b-a;
+            if(n>max){
+                n = max;
+            }
+
+            now = b;
 
         }
         
         sc.close();
+
+        // 家までのバッテリー消費
+        n -= t - now;
         
         if (n > 0) {
             System.out.println("Yes");
