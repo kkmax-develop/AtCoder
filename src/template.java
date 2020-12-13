@@ -5,7 +5,9 @@ public class template {
     Scanner sc = null;
     sc = new Scanner(System.in);
     // 数字取得
-    int n = sc.nextInt();
+    int n = Integer.parseInt(sc.next());
+    long ｌ = Long.parseLong(sc.next());
+
     // 文字取得
     String s = sc.next();
     // 行取得
@@ -15,7 +17,7 @@ public class template {
     }
     ArrayList<Long> numList = new ArrayList<Long>();
     for (int i = 0; i < n; i++) {
-      numList.add(sc.nextLong());
+      numList.add(Long.parseLong(sc.next()));
     }
     sc.close();
 
