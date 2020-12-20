@@ -6,8 +6,8 @@ public class Sample {
 
         Scanner sc = null;
         sc = new Scanner(System.in);
-        int i = sc.nextInt();
-        long n = sc.nextLong();
+        int i = Integer.parseInt(sc.next());
+        long n = Long.parseLong(sc.next());
         String s = sc.next();
         sc.close();
         int ans = 0;
