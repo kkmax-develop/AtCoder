@@ -42,6 +42,9 @@ public class template {
     ArrayList<Long> lList = new ArrayList<Long>();
     ArrayList<String> strList = new ArrayList<String>();
 
+    // Set(値の重複がない)
+    Set<Integer> num = new HashSet<>();
+
     // 累乗
     Math.pow(n, 2);
 
