@@ -20,9 +20,9 @@ public class template {
       numList.add(Long.parseLong(sc.next()));
     }
 
-    ArrayList<Integer> nList = new ArrayList<Integer>();
+    ArrayList<Integer> intList = new ArrayList<Integer>();
     for (int i = 0; i < n; i++) {
-      nList.add(Integer.parseInt(sc.next()));
+      intList.add(Integer.parseInt(sc.next()));
     }
     sc.close();
 
@@ -38,7 +38,8 @@ public class template {
     Collections.min(numList);
 
     // 配列
-    ArrayList<Long> nList = new ArrayList<Long>();
+    ArrayList<Integer> nList = new ArrayList<Integer>();
+    ArrayList<Long> lList = new ArrayList<Long>();
     ArrayList<String> strList = new ArrayList<String>();
 
     // 累乗
@@ -55,7 +56,18 @@ public class template {
     // 出力
     System.out.println("Hello, World!");
 
+    //【10進数→n進数】
+		//10進数30を16進数に変換
+    String s_16 = Integer.toString(30, 16);
+
+    //【n進数→10進数】
+		//16進数1eを10進数に変換
+    int i1 = Integer.parseInt("1e", 16);
     
+    //【n進数→m進数】
+		int n1 = 2;
+		int m1 = 8;
+		String s1 = Integer.toString(Integer.parseInt("1110",n1),m1);
 
     // 約数列挙
     for (long i = 1; i * i <= n; i++) {
@@ -69,10 +81,25 @@ public class template {
     // 3つ以上の数の最大公約数
     long gcd = 0;
     for (int i = 0; i < n; i++) {
-        gcd = GCD(gcd, numList.get(i));
+      gcd = GCD(gcd, numList.get(i));
     }
 
   }
+  
+  // N進数で表したときに特定の値が入っているかをチェック
+  private static boolean judgeContainNumber(int x,int base,int jNum) {
+
+    boolean resultFlag = false;
+    while(x > 0){
+        if(x%base==jNum){
+            resultFlag = true;
+            break;
+        }
+        x /= base;
+    }
+
+    return resultFlag;
+}
   
   // 最大公約数
   private static long GCD(long a, long b) {
