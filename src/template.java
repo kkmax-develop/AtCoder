@@ -19,6 +19,11 @@ public class template {
     for (int i = 0; i < n; i++) {
       numList.add(Long.parseLong(sc.next()));
     }
+
+    ArrayList<Integer> nList = new ArrayList<Integer>();
+    for (int i = 0; i < n; i++) {
+      nList.add(Integer.parseInt(sc.next()));
+    }
     sc.close();
 
     // ソート
@@ -29,6 +34,8 @@ public class template {
 
     // 最大値取得
     Collections.max(numList);
+
+    Collections.min(numList);
 
     // 配列
     ArrayList<Long> nList = new ArrayList<Long>();
