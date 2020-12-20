@@ -14,8 +14,6 @@ public class B {
             numList.add(sc.nextLong());
         }
         sc.close();
-        ArrayList<Long> listB= new ArrayList<Long>();
-
         long a = 0;
         long b = 0;
         long c = 0;
