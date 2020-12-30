@@ -56,6 +56,21 @@ public class template {
       System.out.println("A");
     }
 
+    // 特定の文字を含むか
+    if (s.contains("A")) {
+      System.out.println("OK");
+    }
+
+    // 末尾が特定の文字列に一致するか
+    if (s.endsWith("A")) {
+      System.out.println("OK");
+    }
+    // 先頭が特定の文字列に一致するか
+    if (s.startsWith("A")) {
+      System.out.println("OK");
+    }
+
+
     // 出力
     System.out.println("Hello, World!");
 
