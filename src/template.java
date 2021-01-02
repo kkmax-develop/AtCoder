@@ -70,22 +70,21 @@ public class template {
       System.out.println("OK");
     }
 
-
     // 出力
     System.out.println("Hello, World!");
 
     //【10進数→n進数】
-		//10進数30を16進数に変換
+    //10進数30を16進数に変換
     String s_16 = Integer.toString(30, 16);
 
     //【n進数→10進数】
-		//16進数1eを10進数に変換
+    //16進数1eを10進数に変換
     int i1 = Integer.parseInt("1e", 16);
-    
+
     //【n進数→m進数】
-		int n1 = 2;
-		int m1 = 8;
-		String s1 = Integer.toString(Integer.parseInt("1110",n1),m1);
+    int n1 = 2;
+    int m1 = 8;
+    String s1 = Integer.toString(Integer.parseInt("1110", n1), m1);
 
     // 約数列挙
     for (long i = 1; i * i <= n; i++) {
@@ -100,6 +99,19 @@ public class template {
     long gcd = 0;
     for (int i = 0; i < n; i++) {
       gcd = GCD(gcd, numList.get(i));
+    }
+
+    // bit全探索
+    // 2N-1までインクリメントすることで部分集合を全探索できる
+    long total = 0;
+    int[] A = {1, 2, 3, 4, 5};
+    for(int bit = 0;bit<Math.pow(2,n);bit++){
+      for (int i = 0; i < n; i++) {
+        // ビットが立っている場合の処理
+        if ((bit >> i & 1) == 1) {
+          total += A[i];
+        }
+      }
     }
 
   }
@@ -117,7 +129,7 @@ public class template {
     }
 
     return resultFlag;
-}
+  }
   
   // 最大公約数
   private static long GCD(long a, long b) {
