@@ -9,23 +9,21 @@ public class C {
         sc = new Scanner(System.in);
         long n = Long.parseLong(sc.next());
         Set<String> stringSet = new HashSet<>();
+        ArrayList<String> sList = new ArrayList<String>();
         String s = null;
         for (int i = 0; i < n; i++) {
-            s = sc.next();
-            if (s.substring(0, 1).equals("!")) {
-                if (stringSet.contains(s.substring(1, s.length()))) {
-                    System.out.println(s.substring(1, s.length()));
-                    return;
-                }    
-            } else {
-                if (stringSet.contains("!"+s)) {
-                    System.out.println(s);
-                    return;
-                } 
-            }
+            s = sc.next(); 
+            sList.add(s);
             stringSet.add(s);
         }
         sc.close();
+
+        for (int i = 0; i < n; i++) {
+            if (stringSet.contains("!" + sList.get(i))) {
+                System.out.println(sList.get(i));
+                return;
+            }
+        }
 
         System.out.println("satisfiable");
 
